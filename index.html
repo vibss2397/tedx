@@ -10,6 +10,7 @@
     <meta name="author" content="">
 
     <title>Tedx-Nsit</title>
+	
 
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -27,7 +28,13 @@
 
     <!-- Theme CSS -->
     <link href="css/creative.css" rel="stylesheet">
-
+	
+	<link rel="stylesheet" href="assets/clock/compiled/flipclock.css">
+	<link rel="stylesheet" href="assets/owl/dist/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="assets/owl/dist/assets/owl.theme.default.min.css">
+	    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="assets/clock/compiled/flipclock.min.js"></script>
+	<script src="assets/owl/dist/owl.carousel.js"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -56,9 +63,12 @@
                         <a class="page-scroll" href="#about">Home</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#services">About</a>
+                        <a class="page-scroll" href="#about">About</a>
                     </li>
                     <li>
+                        <a class="page-scroll" href="#speakers">Speakers</a>
+                    </li>
+					<li>
                         <a class="page-scroll" href="#portfolio">Past Speakers</a>
                     </li>
                     <li>
@@ -84,58 +94,83 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">We've got what you need!</h2>
+                    <h2 class="section-heading">Countdown to Tedx Nsit</h2>
                     <hr class="light">
-                    <p class="text-faded">Start Bootstrap has everything you need to get your new website up and running in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!</p>
-                    <a href="#services" class="page-scroll btn btn-default btn-xl sr-button">Get Started!</a>
+					<br>
+                    <div class="clock" style="margin-left:40px;"></div>
                 </div>
             </div>
         </div>
     </section>
+	
+	
 
-    <section id="services">
+    <section id="about">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">At Your Service</h2>
+                    <h2 class="section-heading">About Us</h2>
                     <hr class="primary">
                 </div>
             </div>
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-diamond text-primary sr-icons"></i>
-                        <h3>Sturdy Templates</h3>
-                        <p class="text-muted">Our templates are updated regularly so they don't break.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-paper-plane text-primary sr-icons"></i>
-                        <h3>Ready to Ship</h3>
-                        <p class="text-muted">You can use this theme as is, or you can make changes!</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-newspaper-o text-primary sr-icons"></i>
-                        <h3>Up to Date</h3>
-                        <p class="text-muted">We update dependencies to keep things fresh.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-heart text-primary sr-icons"></i>
-                        <h3>Made with Love</h3>
-                        <p class="text-muted">You have to make your websites with love these days!</p>
-                    </div>
+			<div class="col-md-8 col-md-offset-2 col-xs-12">	
+           <div class="tab-content">
+	 <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#ted" aria-controls="home" role="tab" data-toggle="tab">Ted</a></li>
+    <li role="presentation"><a href="#tedx" aria-controls="profile" role="tab" data-toggle="tab">Tedx</a></li>
+    <li role="presentation"><a href="#tedx-nsit" aria-controls="messages" role="tab" data-toggle="tab">Tedx Nsit</a></li>
+  </ul>		   
+			   
+    <div role="tabpanel" class="tab-pane active" id="ted"><br>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+</div>
+     <div role="tabpanel" class="tab-pane" id="tedx"><br>it is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+</div>
+			   
+<div role="tabpanel" class="tab-pane" id="tedx-nsit"><br>it is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+</div>
+
+</div>
+				</div>
+</div>
+        </div>
+    </section>
+	
+	
+	    <section id="speakers">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Speakers</h2>
+                    
                 </div>
             </div>
         </div>
+        <div class="container">
+            <div class="row">
+                <div class="owl-carousel owl-theme">
+  <div class="item"> <img src="img/portfolio/thumbnails/2.jpg" class="gallery-img" ></div>
+    <div class="item"> <img src="img/portfolio/thumbnails/2.jpg" class="gallery-img" ></div>
+  <div class="item"> <img src="img/portfolio/thumbnails/3.jpg" class="gallery-img" ></div>
+    <div class="item"> <img src="img/portfolio/thumbnails/4.jpg" class="gallery-img"></div>
+   <div class="item"> <img src="img/portfolio/thumbnails/5.jpg" class="gallery-img"></div>
+    <div class="item"> <img src="img/portfolio/thumbnails/6.jpg" class="gallery-img"></div>
+    <div> <img src="img/portfolio/fullsize/2.jpg"></div>
+</div>
+            </div>
+        </div>
+	  
     </section>
-
+<style>
+	.gallery-img {
+	height: 250px !important;
+	width: auto !important;
+}
+	
+	</style>
     <section class="no-padding" id="portfolio">
         <div class="container-fluid">
             <div class="row no-gutter popup-gallery">
@@ -263,7 +298,6 @@
     </section>
 
     <!-- jQuery -->
-    <script src="vendor/jquery/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
@@ -272,7 +306,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
     <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-
+		
     <!-- Theme JavaScript -->
     <script src="js/creative.min.js"></script>
  	
@@ -281,6 +315,46 @@
 	<script src="app.js"></script>
 
 
+
 </body>
+<script type="text/javascript">
+			var clock;
+
+			$(document).ready(function() {
+				
+				// Grab the current date
+				var currentDate = new Date();
+
+				// Set some date in the future. In this case, it's always Jan 1
+				var futureDate  = new Date(currentDate.getFullYear() + 1, 0, 1);
+
+				// Calculate the difference in seconds between the future and current date
+				var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
+
+				// Instantiate a coutdown FlipClock
+				clock = $('.clock').FlipClock(diff, {
+					clockFace: 'DailyCounter',
+					countdown: true
+				});
+				
+				$('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+	autoHeight:true,
+responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:1
+        }
+    }
+})
+			});
+		</script>
 
 </html>
