@@ -17,6 +17,7 @@
 
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 	
@@ -34,7 +35,8 @@
 <link rel="stylesheet" href="assets/owl/dist/assets/owl.theme.default.min.css">
 	    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="assets/clock/compiled/flipclock.min.js"></script>
-	<script src="assets/owl/dist/owl.carousel.js"></script>
+	<script src="assets/owl/dist/owl.carousel.min.js"></script>
+	<script src="assets/anime/anime.min.js"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -43,9 +45,28 @@
     <![endif]-->
 
 </head>
+	<style>
+	.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
 
-<body id="page-top">
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+	</style>
+	
 
+	
+	
+<body id="page-top" onload="myFunction()">
+	<div class="loader"></div>
+	<div id="myDiv">
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -69,10 +90,10 @@
                         <a class="page-scroll" href="#speakers">Speakers</a>
                     </li>
 					<li>
-                        <a class="page-scroll" href="#portfolio">Past Speakers</a>
+                        <a class="page-scroll" href="#past-speaker">Past Speakers</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Team</a>
+                        <a class="page-scroll" href="#Team">Team</a>
                     </li>
 					
 					<li>
@@ -90,7 +111,7 @@
 		<div class="header-content"><img src="img/tedx.png" width=40%></div>
     </header>
 
-    <section class="bg-primary" id="about">
+    <section class="bg-dark" id="about">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
@@ -124,13 +145,14 @@
     <li role="presentation"><a href="#tedx-nsit" aria-controls="messages" role="tab" data-toggle="tab">Tedx Nsit</a></li>
   </ul>		   
 			   
-    <div role="tabpanel" class="tab-pane active" id="ted"><br>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+			   <div role="tabpanel" class="tab-pane active" id="ted"><br><h4>TED is a nonprofit devoted to spreading ideas, usually in the form of short, powerful talks (18 minutes or less). TED began in 1984 as a conference where Technology, Entertainment and Design converged, and today covers almost all topics — from science to business to global issues — in more than 100 languages. Meanwhile, independently run TEDx events help share ideas in communities around the world.</h4>
 
 </div>
-     <div role="tabpanel" class="tab-pane" id="tedx"><br>it is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+			   <div role="tabpanel" class="tab-pane" id="tedx"><br><h4>TEDx is a program which is run under the TED brand to bring a TED-like experience to as many people as possible. </h4>
 </div>
 			   
-<div role="tabpanel" class="tab-pane" id="tedx-nsit"><br>it is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+<div role="tabpanel" class="tab-pane" id="tedx-nsit"><br><h4>TEDx NSIT is an event filled with brilliant speakers, thought-provoking personalities and mind-blowing conversations. TEDXNSIT is where we unleash new ideas, inspire and inform the community. It takes place in NSIT every year and it gets better each time. 
+	We look forward to motivate and inspire the audience with some unconventional speakers from different walks of life coming together under one roof for the betterment of the community.</h4>
 </div>
 
 </div>
@@ -140,40 +162,144 @@
     </section>
 	
 	
-	    <section id="speakers">
-        <div class="container">
+	    <section id="speakers" class="bg-dark">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-12 text-center">
+                <div class="col-md-4 col-md-offset-4 text-center">
                     <h2 class="section-heading">Speakers</h2>
-                    
+					<hr>
+                    <br>
                 </div>
             </div>
         </div>
-        <div class="container">
-            <div class="row">
+        <div class="container-fluid">
+            <div class="row no-gutter popup-gallery">
                 <div class="owl-carousel owl-theme">
-  <div class="item"> <img src="img/portfolio/thumbnails/2.jpg" class="gallery-img" ></div>
-    <div class="item"> <img src="img/portfolio/thumbnails/2.jpg" class="gallery-img" ></div>
-  <div class="item"> <img src="img/portfolio/thumbnails/3.jpg" class="gallery-img" ></div>
-    <div class="item"> <img src="img/portfolio/thumbnails/4.jpg" class="gallery-img"></div>
-   <div class="item"> <img src="img/portfolio/thumbnails/5.jpg" class="gallery-img"></div>
-    <div class="item"> <img src="img/portfolio/thumbnails/6.jpg" class="gallery-img"></div>
-    <div> <img src="img/portfolio/fullsize/2.jpg"></div>
-</div>
-            </div>
+					
+					<div class="item" > 
+						<div class="row ">
+							
+							<div class="col-md-5 col-xs-12" style="margin-left:30%;" >
+								<a href="img/portfolio/thumbnails/1.jpg" class="portfolio-box">
+									<img src="img/portfolio/thumbnails/5.jpg" class="gallery-img img-responsive" >
+								 <div class="portfolio-box-caption" style="margin-left:-3%;">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-name">
+                                
+								<i class="fa fa-facebook-official fa-3x" aria-hidden="true" onclick="fb()"></i>
+								<i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i>
+								<i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i>
+                                </div>
+								
+									 </div></div> 
+								</a>
+							</div>
+							<div class="col-md-9 col-md-offset-5 project-name">
+									<h1> Your Name</h1>
+									<h4>CEO,Tech company</h4>
+							
+                                </div>
+							
+						</div>
+					</div>
+			
+							<div class="item" > 
+						<div class="row ">
+							
+							<div class="col-md-5 col-xs-12" style="margin-left:30%;" >
+								<a href="img/portfolio/thumbnails/2.jpg" class="portfolio-box">
+									<img src="img/portfolio/thumbnails/2.jpg" class="gallery-img img-responsive" >
+								 <div class="portfolio-box-caption" style="margin-left:-3%;">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-name">
+                               
+								<i class="fa fa-facebook-official fa-3x" aria-hidden="true" onclick="fb()"></i>
+								<i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i>
+								<i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i>
+                                </div>
+								
+									 </div></div> 
+								</a>
+							</div>
+ 								<div class="col-md-9 col-md-offset-5 project-name">
+									<h1> Your Name</h1>
+									<h4>CEO,Tech company</h4>
+							
+                                </div>
+							
+						</div>
+								
+								
+					</div>
+					
+					
+							<div class="item" > 
+						<div class="row ">
+							
+							<div class="col-md-5 col-xs-12" style="margin-left:30%;" >
+								<a href="img/portfolio/fullsize/1.jpg" class="portfolio-box">
+									<img src="img/portfolio/thumbnails/1.jpg" class="gallery-img img-responsive" >
+								 <div class="portfolio-box-caption" style="margin-left:-3%;">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-name">
+                                 
+								<i class="fa fa-facebook-official fa-3x" aria-hidden="true" onclick="fb()"></i>
+								<i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i>
+								<i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i>
+                                </div>
+								
+									 </div></div> 
+								</a>
+							</div>
+							<div class="col-md-9 col-md-offset-5 project-name">
+									<h1> Your Name</h1>
+									<h4>CEO,Tech company</h4>
+							
+                                </div>
+							
+						</div>
+					</div>
+					
+			
+					
+					
+				</div>
+            
+			</div>
         </div>
 	  
     </section>
 <style>
 	.gallery-img {
-	height: 250px !important;
-	width: auto !important;
+	height: 70%;
+	width: 	100% !important;
+	margin-left:-3%;	
 }
 	
 	</style>
-    <section class="no-padding" id="portfolio">
+	
+	<script>
+	function fb(){
+		alert('yes');
+	}
+	
+	</script>
+   
+	<section class="no-padding" id="past-speaker">
+		 <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4 text-center">
+					<br>
+                    <h2 class="section-heading"> Past Speakers</h2>
+					<hr>
+                    <br>
+                </div>
+            </div>
+        </div>
         <div class="container-fluid">
+			<h2>2016</h2>
             <div class="row no-gutter popup-gallery">
+		
                 <div class="col-lg-4 col-sm-6">
                     <a href="img/portfolio/fullsize/1.jpg" class="portfolio-box">
                         <img src="img/portfolio/thumbnails/1.jpg" class="img-responsive" alt="">
@@ -219,6 +345,26 @@
                         </div>
                     </a>
                 </div>
+				<div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/3.jpg" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/3.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Category
+                                </div>
+                                <div class="project-name">
+                                    Project Name
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+			</div>
+			
+			 <div class="row no-gutter popup-gallery">
+				<br>
+				<h2>2015</h2>
                 <div class="col-lg-4 col-sm-6">
                     <a href="img/portfolio/fullsize/4.jpg" class="portfolio-box">
                         <img src="img/portfolio/thumbnails/4.jpg" class="img-responsive" alt="">
@@ -268,6 +414,7 @@
         </div>
     </section>
 
+<!--
     <aside class="bg-dark">
         <div class="container text-center">
             <div class="call-to-action">
@@ -276,27 +423,192 @@
             </div>
         </div>
     </aside>
-
-    <section id="contact">
+-->
+<br>
+    <section id="Team" class="bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h1 class="section-heading">Our Team!</h1>
+                    <hr  class="primary">
+                </div>
+                <div class="col-lg-4" style="padding-left:152px;">
+                    <img src="img/team/back.png" width=40% class="img-responsive img-circle">
+					<h4>Name Name</h4>
+					<h5 style="margin-left:3%;">Designation</h5>
+                </div>
+				
+				   <div class="col-lg-4 " style="padding-left:152px;">
+                    <img src="img/team/back.png" width=40% class="img-responsive img-circle">
+					<h4>Name Name</h4>
+					<h5 style="margin-left:3%;">Designation</h5>
+                </div>
+				
+				   <div class="col-lg-4 " style="padding-left:152px;">
+                    <img src="img/team/back.png" width=40% class="img-responsive img-circle">
+					<h4>Name Name</h4>
+					<h5 style="margin-left:3%;">Designation</h5>
+                </div>
+			</div>
+			<br>
+			 <div class="row">
+				<div class="col-lg-4" style="padding-left:152px;">
+                    <img src="img/team/back.png" width=40% class="img-responsive img-circle">
+					<h4>Name Name</h4>
+					<h5 style="margin-left:3%;">Designation</h5>
+                </div>
+				<div class="col-lg-4" style="padding-left:152px;">
+                    <img src="img/team/back.png" width=40% class="img-responsive img-circle">
+					<h4>Name Name</h4>
+					<h5 style="margin-left:3%;">Designation</h5>
+                </div>
+				
+				<div class="col-lg-4" style="padding-left:152px;">
+                    <img src="img/team/back.png" width=40% class="img-responsive img-circle">
+					<h4>Name Name</h4>
+					<h5 style="margin-left:3%;">Designation</h5>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+	<aside>
+        <div class="container text-center">
+            <div class="call-to-action">
+                <h2>yaaha pe site visitors etc etc</h2>
+                
+            </div>
+        </div>
+    </aside>
+	
+	<section id="contact" class="bg-dark">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h2 class="section-heading">Let's Get In Touch!</h2>
                     <hr class="primary">
-                    <p>Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
                 </div>
-                <div class="col-lg-4 col-lg-offset-2 text-center">
-                    <i class="fa fa-phone fa-3x sr-contact"></i>
-                    <p>123-456-6789</p>
+                <div class="col-lg-6">
+                    
+					    <form class="well form-horizontal" action=" " method="post"  id="contact_form">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Contact Us Today!</legend>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">First Name</label>  
+  <div class="col-md-6 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input  name="first_name" placeholder="First Name" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label" >Last Name</label> 
+    <div class="col-md-6 inputGroupContainer">
+    <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input name="last_name" placeholder="Last Name" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+       <div class="form-group">
+  <label class="col-md-4 control-label">E-Mail</label>  
+    <div class="col-md-6 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+  <input name="email" placeholder="E-Mail Address" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+
+<!-- Text input-->
+       
+<div class="form-group">
+  <label class="col-md-4 control-label">Phone</label>  
+    <div class="col-md-6 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+  <input name="phone" placeholder="(845)555-1212" class="form-control" type="text">
+    </div>
+  </div>
+</div>
+
+
+<!-- Text area -->
+  
+<div class="form-group">
+  <label class="col-md-4 control-label">Your Message</label>
+    <div class="col-md-6 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+        	<textarea class="form-control" name="comment" placeholder="Project Description"></textarea>
+  </div>
+  </div>
+</div>
+
+<!-- Success message -->
+<div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label"></label>
+  <div class="col-md-4">
+    <button type="submit" class="btn btn-warning" >Send <span class="glyphicon glyphicon-send"></span></button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+					
                 </div>
-                <div class="col-lg-4 text-center">
-                    <i class="fa fa-envelope-o fa-3x sr-contact"></i>
-                    <p><a href="mailto:your-email@your-domain.com">feedback@startbootstrap.com</a></p>
+				
+			
+				
+				
+				  <style>
+      #map {
+        width: 160%;
+        height: 72%;
+        background-color: grey;
+      }
+    </style>
+				
+                <div class="col-lg-4">
+                    <div id="map"></div>
                 </div>
             </div>
         </div>
     </section>
-
+	</div>
+	 <script>
+      function initMap() {
+        var uluru = {lat: 28.6091129, lng: 76.9650283};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 12,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+	</script> 
+	
+	<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvONUt0bC0uLAaD3zx2iIa-s02_XCXqtU&callback=initMap">
+    </script> 
     <!-- jQuery -->
 
     <!-- Bootstrap Core JavaScript -->
@@ -315,11 +627,20 @@
 	<script src="app.js"></script>
 
 
-
 </body>
 <script type="text/javascript">
 			var clock;
+	var myVar;
 
+function myFunction() {
+    myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+	
 			$(document).ready(function() {
 				
 				// Grab the current date
@@ -347,7 +668,7 @@ responsive:{
             items:1
         },
         600:{
-            items:3
+            items:1
         },
         1000:{
             items:1
@@ -356,5 +677,7 @@ responsive:{
 })
 			});
 		</script>
+	
+	
 
 </html>

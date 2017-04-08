@@ -38,13 +38,21 @@ a:hover,
 a:focus {
   color: #eb3812;
 }
-h1,
+
+h1{
+font-family: 'Raleway Semibold'	
+}
+
+.image-container:hover{
+    display: block;
+    background: rgba(0, 0, 0, .6);
+}
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Raleway', 'Helvetica Neue', Arial, sans-serif;
 }
 p {
   font-size: 16px;
@@ -166,7 +174,7 @@ header {
   -o-background-size: cover;
   background-position: center;
   background-image: url('../img/nsit.jpg');
-	background-size: 140%;
+	
   text-align: center;
   color: white;
 }
@@ -186,6 +194,11 @@ header .header-content .header-content-inner h1 {
 header .header-content .header-content-inner hr {
   margin: 30px auto;
 }
+
+.img-circ {
+    border-radius: 50%;
+}
+
 header .header-content .header-content-inner p {
   font-weight: 300;
   color: rgba(255, 255, 255, 0.7);
@@ -288,6 +301,8 @@ header .header-content .header-content-inner p {
     font-size: 22px;
   }
 }
+
+
 .call-to-action h2 {
   margin: 0 auto 20px;
 }
