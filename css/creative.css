@@ -36,7 +36,8 @@ a {
 }
 a:hover,
 a:focus {
-  color: #eb3812;
+  color:red;
+	
 }
 
 h1{
@@ -50,9 +51,12 @@ font-family: 'Raleway Semibold'
 h2,
 h3,
 h4,
-h5,
 h6 {
-  font-family: 'Raleway', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Raleway Regular', 'Helvetica Neue', Arial, sans-serif;
+}
+
+h5{
+	font-family: 'Open Sans'
 }
 p {
   font-size: 16px;
@@ -87,14 +91,14 @@ aside {
   transition: all 0.35s;
 }
 .navbar-default .navbar-header .navbar-brand {
-  color: #aaaaaa;
+   color:rgb(230,43,30);
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
   font-weight: 700;
   text-transform: uppercase;
 }
 .navbar-default .navbar-header .navbar-brand:hover,
 .navbar-default .navbar-header .navbar-brand:focus {
-  color: #eb3812;
+  color: rgb(230,43,30);
 }
 .navbar-default .navbar-header .navbar-toggle {
   font-weight: 700;
@@ -111,11 +115,11 @@ aside {
 }
 .navbar-default .nav > li > a:hover,
 .navbar-default .nav > li > a:focus:hover {
-  color: #aaaaaa;
+  color:  rgb(230,43,30);
 }
 .navbar-default .nav > li.active > a,
 .navbar-default .nav > li.active > a:focus {
-  color: #aaaaaa !important;
+  color:  rgb(230,43,30)!important;
   background-color: transparent;
 }
 .navbar-default .nav > li.active > a:hover,
@@ -147,12 +151,12 @@ aside {
     border-color: rgba(34, 34, 34, 0.05);
   }
   .navbar-default.affix .navbar-header .navbar-brand {
-    color: #aaaaaa;
+    color:  rgb(230,43,30);
     font-size: 14px;
   }
   .navbar-default.affix .navbar-header .navbar-brand:hover,
   .navbar-default.affix .navbar-header .navbar-brand:focus {
-    color: #eb3812;
+    color: rgb(230,43,30);
   }
   .navbar-default.affix .nav > li > a,
   .navbar-default.affix .nav > li > a:focus {
@@ -160,7 +164,7 @@ aside {
   }
   .navbar-default.affix .nav > li > a:hover,
   .navbar-default.affix .nav > li > a:focus:hover {
-    color: #aaaaaa;
+    color:  rgb(230,43,30);
   }
 }
 header {
@@ -257,7 +261,7 @@ header .header-content .header-content-inner p {
   color: white;
   opacity: 0;
   display: block;
-  background: rgba(240, 95, 64, 0.9);
+  background: rgba(230,43,60,0.4);
   position: absolute;
   bottom: 0;
   text-align: center;
@@ -267,6 +271,17 @@ header .header-content .header-content-inner p {
   -moz-transition: all 0.35s;
   transition: all 0.35s;
 }
+
+.clr{
+background: rgba(230,43,60,0.4);
+}
+
+.clr:hover{
+background: rgba(230,43,60,1);
+}
+
+
+
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content {
   width: 100%;
   text-align: center;

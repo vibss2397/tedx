@@ -1,6 +1,8 @@
 
 <html lang="en">
-
+<?php 
+require('connect.php');
+?>
 <head>
 
     <meta charset="utf-8">
@@ -37,67 +39,18 @@
 	<script src="assets/clock/compiled/flipclock.min.js"></script>
 	<script src="assets/owl/dist/owl.carousel.min.js"></script>
 	<script src="assets/anime/anime.min.js"></script>
+	
+	<link href="assets/modal/custombox.min.css" rel="stylesheet">
+
+<script src="assets/modal/custombox.min.js"></script>
+<script src="assets/modal/custombox.legacy.min.js"></script>
+	
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
-	<style>
-/* Center the loader */
-#loader {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  z-index: 1;
-  width: 150px;
-  height: 150px;
-  margin: -75px 0 0 -75px;
-  border: 16px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 16px solid #3498db;
-  width: 120px;
-  height: 120px;
-  -webkit-animation: spin 2s linear infinite;
-  animation: spin 2s linear infinite;
-}
-
-@-webkit-keyframes spin { 
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-/* Add animation to "page content" */
-.animate-bottom {
-  position: relative;
-  -webkit-animation-name: animatebottom;
-  -webkit-animation-duration: 1s;
-  animation-name: animatebottom;
-  animation-duration: 1s
-}
-
-@-webkit-keyframes animatebottom {
-  from { bottom:-100px; opacity:0 } 
-  to { bottom:0px; opacity:1 }
-}
-
-@keyframes animatebottom { 
-  from{ bottom:-100px; opacity:0 } 
-  to{ bottom:0; opacity:1 }
-}
-
-#myDiv {
-  display: none;
-  text-align: center;
-}
-</style>
-	
 	
 </head>
 
@@ -107,7 +60,7 @@
 	
 <body id="page-top" >
 	<div id="loader"></div>
-	<div style="display:none;" id="myDiv" class="animate-bottom">
+	<div  id="myDiv" class="animate-bottom">
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -122,7 +75,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="#about">Home</a>
+                        <a class="page-scroll" href="#home">Home</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#about">About</a>
@@ -147,12 +100,12 @@
         <!-- /.container-fluid -->
     </nav>
 
-    <header>
+    <header id="#home">
 		<div id="particles-js"></div>
 		<div class="header-content"><img src="img/tedx.png" width=40%></div>
     </header>
 
-    <section class="bg-dark" id="about">
+    <section class="bg-dark">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
@@ -178,7 +131,7 @@
         </div>
         <div class="container">
             <div class="row">
-			<div class="col-md-8 col-md-offset-2 col-xs-12">	
+			<div class="col-md-7 col-md-offset-3 col-xs-12">	
            <div class="tab-content">
 	 <ul class="nav nav-tabs" role="tablist">
     <li role="presentation" class="active"><a href="#ted" aria-controls="home" role="tab" data-toggle="tab">Ted</a></li>
@@ -186,14 +139,13 @@
     <li role="presentation"><a href="#tedx-nsit" aria-controls="messages" role="tab" data-toggle="tab">Tedx Nsit</a></li>
   </ul>		   
 			   
-			   <div role="tabpanel" class="tab-pane active" id="ted"><br><h4>TED is a nonprofit devoted to spreading ideas, usually in the form of short, powerful talks (18 minutes or less). TED began in 1984 as a conference where Technology, Entertainment and Design converged, and today covers almost all topics — from science to business to global issues — in more than 100 languages. Meanwhile, independently run TEDx events help share ideas in communities around the world.</h4>
+			   <div role="tabpanel" class="tab-pane active" id="ted"><br><h4>TED, the amalgamation of technology, entertainment and design is a global platform to ideas that have the power to change attitudes, lives and eventually the world. Ideas that have broken stereotypes ; ideas that have helped during times of crisis ; ideas that have brought smiles on millions of faces. And TED is where these ideas reach the seekers of knowledge through short but powerful conversations(18 min or less) with inspiring thinkers and  people from diverse disciplines and cultures. TED began in 1984 as a conference where Technology, Entertainment and Design converged, and today covers almost all topics — from science to business to global issues — in more than 100 languages.</h4>
 
 </div>
-			   <div role="tabpanel" class="tab-pane" id="tedx"><br><h4>TEDx is a program which is run under the TED brand to bring a TED-like experience to as many people as possible. </h4>
+			   <div role="tabpanel" class="tab-pane" id="tedx"><br><h4>TEDx is a program under the TED banner to provide a  TED-like experience to as many people as possible. The TEDx Program under TED  acts as a catalyst  to help communities, organizations and individuals to ensue conversation and connection  by means of  screening of TED Talks videos or a combination of live presenters .TEDx events are planned and coordinated independently, under a free license granted by TED. </h4>
 </div>
 			   
-<div role="tabpanel" class="tab-pane" id="tedx-nsit"><br><h4>TEDx NSIT is an event filled with brilliant speakers, thought-provoking personalities and mind-blowing conversations. TEDXNSIT is where we unleash new ideas, inspire and inform the community. It takes place in NSIT every year and it gets better each time. 
-	We look forward to motivate and inspire the audience with some unconventional speakers from different walks of life coming together under one roof for the betterment of the community.</h4>
+<div role="tabpanel" class="tab-pane" id="tedx-nsit"><br><h4>TEDXNSIT is an event filled with brilliant speakers, thought-provoking personalities and mind-blowing conversations. TEDXNSIT is where we unleash new ideas, inspire and inform the community. In the spirit of ideas worth spreading,since its inception  TEDxNSIT has now become an annual event. We look forward to motivate and inspire the audience with some unconventional speakers from different walks of life coming together under one roof for the betterment of the community</h4>
 </div>
 
 </div>
@@ -216,93 +168,55 @@
         <div class="container-fluid">
             <div class="row no-gutter popup-gallery">
                 <div class="owl-carousel owl-theme">
-					
-					<div class="item" > 
-						<div class="row ">
+					<?php 
+					$sql=mysqli_query($conn,"SELECT * FROM speakers WHERE year=2017");
+					if ($sql->num_rows > 0) {
+    // output data o	
+    while($row = $sql->fetch_assoc()) {
+		
+        echo '	<div class="item" > 
+						<div class="row">
+							<input type="text" style="display:none;" id="s'.$row["id"].'" value="'.$row["description"].'">
+							<input type="text" style="display:none;" id="n'.$row["id"].'" value="'.$row["name"].'">
+							<a href="https://www.w3schools.com" id="fb'.$row["id"].'" target=_blank></a>
 							
-							<div class="col-md-5 col-xs-12" style="margin-left:30%;" >
-								<a href="img/portfolio/thumbnails/1.jpg" class="portfolio-box">
+							<a href="'.$row["linkedin"].'" id="lin'.$row["id"].'" target=_blank></a>
+							<div class="col-md-5 col-md-offset-3 col-xs-12" style="margin-left:30%;">
+								<div class="portfolio-box"  >
 									<img src="img/portfolio/thumbnails/5.jpg" class="gallery-img img-responsive" >
-								 <div class="portfolio-box-caption" style="margin-left:-3%;">
-                            <div class="portfolio-box-caption-content">
+<div class="portfolio-box-caption" style="margin-left:-3%;"	>
+                            <div class="portfolio-box-caption-content" style="z-index:3;">
                                 <div class="project-name">
-                                
-								<i class="fa fa-facebook-official fa-3x" aria-hidden="true" onclick="fb()"></i>
-								<i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i>
-								<i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i>
-                                </div>
-								
-									 </div></div> 
-								</a>
+								 
+									 <form  action="'.$row["fb"].'">
+   <button class="btn btn-primary"><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i></button>
+   									</form>
+									 
+									 <form action="'.$row["linkedin"].'">
+   <button class="btn btn-primary"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></button>
+   									</form>
+
+                              <button class="btn btn-primary"  onclick="modalshow('.$row["id"].')"> <h6>Learn More</h6></button>
+
+								</div>
+								</div>
+									  
+								</div> 
+									
+								</div>
+									<h1>'. $row["name"] .'</h1>
+									<h4>'.$row["title"].'</h4>
 							</div>
-							<div class="col-md-9 col-md-offset-5 project-name">
-									<h1> Your Name</h1>
-									<h4>CEO,Tech company</h4>
 							
-                                </div>
 							
 						</div>
-					</div>
-			
-							<div class="item" > 
-						<div class="row ">
-							
-							<div class="col-md-5 col-xs-12" style="margin-left:30%;" >
-								<a href="img/portfolio/thumbnails/2.jpg" class="portfolio-box">
-									<img src="img/portfolio/thumbnails/2.jpg" class="gallery-img img-responsive" >
-								 <div class="portfolio-box-caption" style="margin-left:-3%;">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-name">
-                               
-								<i class="fa fa-facebook-official fa-3x" aria-hidden="true" onclick="fb()"></i>
-								<i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i>
-								<i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i>
-                                </div>
-								
-									 </div></div> 
-								</a>
-							</div>
- 								<div class="col-md-9 col-md-offset-5 project-name">
-									<h1> Your Name</h1>
-									<h4>CEO,Tech company</h4>
-							
-                                </div>
-							
-						</div>
-								
-								
-					</div>
+					</div>' ;
+    }
+} else {
+    echo "Speakers to be added soon...";
+}
 					
-					
-							<div class="item" > 
-						<div class="row ">
-							
-							<div class="col-md-5 col-xs-12" style="margin-left:30%;" >
-								<a href="img/portfolio/fullsize/1.jpg" class="portfolio-box">
-									<img src="img/portfolio/thumbnails/1.jpg" class="gallery-img img-responsive" >
-								 <div class="portfolio-box-caption" style="margin-left:-3%;">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-name">
-                                 
-								<i class="fa fa-facebook-official fa-3x" aria-hidden="true" onclick="fb()"></i>
-								<i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i>
-								<i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i>
-                                </div>
-								
-									 </div></div> 
-								</a>
-							</div>
-							<div class="col-md-9 col-md-offset-5 project-name">
-									<h1> Your Name</h1>
-									<h4>CEO,Tech company</h4>
-							
-                                </div>
-							
-						</div>
-					</div>
-					
-			
-					
+					?>
 					
 				</div>
             
@@ -310,9 +224,10 @@
         </div>
 	  
     </section>
-<style>
+
+		<style>
 	.gallery-img {
-	height: 70%;
+	height: 70%  !important;
 	width: 	100% !important;
 	margin-left:-3%;	
 }
@@ -340,8 +255,46 @@
         <div class="container-fluid">
 			<h2>2016</h2>
             <div class="row no-gutter popup-gallery">
+				<?php 
+					$sql=mysqli_query($conn,"SELECT * FROM speakers WHERE year=2016");
+					if ($sql->num_rows > 0) {
+    // output data o	
+    while($row = $sql->fetch_assoc()) {
+               echo' <div class="col-lg-4 col-sm-6">
+			   	<input type="text" style="display:none;" id="s'.$row["id"].'" value="'.$row["description"].'">
+							<input type="text" style="display:none;" id="n'.$row["id"].'" value="'.$row["name"].'">
+							
+                    <div class="portfolio-box" onclick="modalshow('.$row["id"].')">
+                        <img src="img/portfolio/thumbnails/1.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                  <h1> '.$row["name"].'</h1>
+                                </div>
+                                <div class="project-name">
+                                  <h3>  '.$row["title"].' </h3>
+                                </div>
+								
+                        </div>
+						
+                    </div>
+					
+                </div> <br>'; } }
+						else {
+    echo "<br>Speakers to be added soon...";
+} ?>
+            </div>
+        </div>
 		
-                <div class="col-lg-4 col-sm-6">
+		<div class="container-fluid">
+			<h2>2015</h2>
+            <div class="row no-gutter popup-gallery">
+				<?php 
+					$sql=mysqli_query($conn,"SELECT * FROM speakers WHERE year=2015");
+					if ($sql->num_rows > 0) {
+    // output data o	
+    while($row = $sql->fetch_assoc()) {
+               echo' <div class="col-lg-4 col-sm-6">
                     <a href="img/portfolio/fullsize/1.jpg" class="portfolio-box">
                         <img src="img/portfolio/thumbnails/1.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
@@ -355,102 +308,10 @@
                             </div>
                         </div>
                     </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/2.jpg" class="portfolio-box">
-                        <img src="img/portfolio/thumbnails/2.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/3.jpg" class="portfolio-box">
-                        <img src="img/portfolio/thumbnails/3.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-				<div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/3.jpg" class="portfolio-box">
-                        <img src="img/portfolio/thumbnails/3.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-			</div>
-			
-			 <div class="row no-gutter popup-gallery">
-				<br>
-				<h2>2015</h2>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/4.jpg" class="portfolio-box">
-                        <img src="img/portfolio/thumbnails/4.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/5.jpg" class="portfolio-box">
-                        <img src="img/portfolio/thumbnails/5.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/6.jpg" class="portfolio-box">
-                        <img src="img/portfolio/thumbnails/6.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+                </div> <br>'; } }
+						else {
+    echo "Speakers to be added soon...";
+} ?>
             </div>
         </div>
     </section>
@@ -532,7 +393,7 @@
                 </div>
                 <div class="col-lg-6">
                     
-					    <form class="well form-horizontal" action=" " method="post"  id="contact_form">
+ <form class="well form-horizontal" action=" " method="post"  id="contact_form">
 <fieldset>
 
 <!-- Form Name -->
@@ -574,6 +435,9 @@
 </div>
 
 
+	
+
+    
 <!-- Text input-->
        
 <div class="form-group">
@@ -632,6 +496,31 @@
             </div>
         </div>
     </section>
+	
+	
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+  Launch demo modal
+</button>
+	<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		     <span aria-hidden="true">&times;</span>
+        </button>
+		  <h4 class="modal-title" id="exampleModalLongTitle">Modal title</h4>
+        
+        
+      </div>
+      <div class="modal-body" >
+		  <div class="row">
+			  <div class="col-md-11" id="modal-body">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+		  
+		  </div>
+      </div>
+    </div>
+  </div>
+</div>
 	
 	</div>
 	
@@ -697,7 +586,7 @@ function showPage() {
 				var currentDate = new Date();
 
 				// Set some date in the future. In this case, it's always Jan 1
-				var futureDate  = new Date(currentDate.getFullYear() + 1, 0, 1);
+				var futureDate  =new Date(2017, 3, 16);
 
 				// Calculate the difference in seconds between the future and current date
 				var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
@@ -726,6 +615,12 @@ function showPage() {
 								}
 					})
 			});
+	
+	// Instantiate new modal
+
+
+// Open
+
 		
 		
 		</script>
@@ -735,7 +630,24 @@ function showPage() {
 	
 
 </body>
-
+<script>
+	function modalshow(id){
+		var desc=document.getElementById("s"+id).value;
+		var name=document.getElementById("n"+id).value;
+		$("#exampleModalLongTitle").html('<h4>'+name+'</h4>');
+		$("#modal-body").html(desc);
+		$("#exampleModalLong").modal();
+		}
+	
+	function fb(id){
+		
+		$('#fb'+id).click();
+		}
+	
+	function li(id){
+	$('#li'+id).click();
+		}
+	</script>
 	
 
 	
