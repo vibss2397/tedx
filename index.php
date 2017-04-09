@@ -39,11 +39,14 @@ require('connect.php');
 	<script src="assets/clock/compiled/flipclock.min.js"></script>
 	<script src="assets/owl/dist/owl.carousel.min.js"></script>
 	<script src="assets/anime/anime.min.js"></script>
+	<script src="assets/countup/countUp.js"></script>
+	<link rel="stylesheet"href="assets/wow/animate.css">
+	<script src="assets/wow/wow.min.js"></script>
 	
-	<link href="assets/modal/custombox.min.css" rel="stylesheet">
+	 <script>
+              new WOW().init();
+              </script>
 
-<script src="assets/modal/custombox.min.js"></script>
-<script src="assets/modal/custombox.legacy.min.js"></script>
 	
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -102,12 +105,12 @@ require('connect.php');
 
     <header id="#home">
 		<div id="particles-js"></div>
-		<div class="header-content"><img src="img/tedx.png" width=40%></div>
+		<div class="header-content"><img src="img/tedxx.png" width=40%></div>
     </header>
 
-    <section class="bg-dark">
+    <section class="bg-dark" >
         <div class="container">
-            <div class="row">
+            <div class="row wow bounceInUp" data-wow-offset="10" data-wow-delay="1s">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h2 class="section-heading" style="font-family:Raleway Semibold;">Countdown to Tedx Nsit</h2>
                     <hr class="light">
@@ -118,9 +121,8 @@ require('connect.php');
         </div>
     </section>
 	
-	
 
-    <section id="about">
+    <section id="about" class="wow bounceIn" data-wow-duration="2s">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -155,8 +157,8 @@ require('connect.php');
     </section>
 	
 	
-	    <section id="speakers" class="bg-dark">
-        <div class="container-fluid">
+	    <section id="speakers" class="bg-dark" >
+        <div class="container-fluid wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">
             <div class="row">
                 <div class="col-md-4 col-md-offset-4 text-center">
                     <h2 class="section-heading"  style="font-family:Raleway Semibold;">Speakers</h2>
@@ -174,7 +176,7 @@ require('connect.php');
     // output data o	
     while($row = $sql->fetch_assoc()) {
 		
-        echo '	<div class="item" > 
+        echo '	<div class="item wow fadeInUp" data-wow-duration="2s" data-wow-delay="1s"> 
 						<div class="row">
 							<input type="text" style="display:none;" id="s'.$row["id"].'" value="'.$row["description"].'">
 							<input type="text" style="display:none;" id="n'.$row["id"].'" value="'.$row["name"].'">
@@ -241,10 +243,10 @@ require('connect.php');
 	
 	</script>
    
-	<section class="no-padding" id="past-speaker">
+	<section class="no-padding" id="past-speaker" >
 		 <div class="container-fluid">
             <div class="row">
-                <div class="col-md-4 col-md-offset-4 text-center">
+                <div class="col-md-4 col-md-offset-4 text-center" >
 					<br>
                     <h2 class="section-heading" style="font-family:Raleway Semibold;color:rgb(230,43,30)"> Past Speakers</h2>
 					<hr>
@@ -252,15 +254,15 @@ require('connect.php');
                 </div>
             </div>
         </div>
-        <div class="container-fluid">
-			<h2>2016</h2>
+        <div class="container-fluid" >
+			<div class="wow slideInRight" data-wow-offset="10"><h2>2016</h2></div>
             <div class="row no-gutter popup-gallery">
 				<?php 
 					$sql=mysqli_query($conn,"SELECT * FROM speakers WHERE year=2016");
 					if ($sql->num_rows > 0) {
     // output data o	
     while($row = $sql->fetch_assoc()) {
-               echo' <div class="col-lg-4 col-sm-6">
+               echo' <div class="col-lg-4 col-sm-6 wow slideInRight" data-wow-offset="10">
 			   	<input type="text" style="display:none;" id="s'.$row["id"].'" value="'.$row["description"].'">
 							<input type="text" style="display:none;" id="n'.$row["id"].'" value="'.$row["name"].'">
 							
@@ -287,14 +289,14 @@ require('connect.php');
         </div>
 		
 		<div class="container-fluid">
-			<h2>2015</h2>
+			<div class="wow slideInRight" data-wow-offset="10"><h2>2015</h2></div>
             <div class="row no-gutter popup-gallery">
 				<?php 
 					$sql=mysqli_query($conn,"SELECT * FROM speakers WHERE year=2015");
 					if ($sql->num_rows > 0) {
     // output data o	
     while($row = $sql->fetch_assoc()) {
-               echo' <div class="col-lg-4 col-sm-6">
+               echo' <div class="col-lg-4 col-sm-6 wow slideInRight" data-wow-offset="10">
                     <a href="img/portfolio/fullsize/1.jpg" class="portfolio-box">
                         <img src="img/portfolio/thumbnails/1.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
@@ -329,58 +331,75 @@ require('connect.php');
 <br>
     <section id="Team" class="bg-dark">
         <div class="container">
-            <div class="row">
+            <div class="row wow bounceInRight" data-wow-offset="10">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h1 class="section-heading">Our Team!</h1>
                     <hr  class="primary">
                 </div>
-                <div class="col-lg-4" style="padding-left:152px;">
-                    <img src="img/team/back.png" width=40% class="img-responsive img-circle">
-					<h4>Name Name</h4>
-					<h5 style="margin-left:3%;">Designation</h5>
-                </div>
+					
+				<?php 
+					$sql=mysqli_query($conn,"SELECT * FROM team");
+					if ($sql->num_rows > 0) {
+    // output data o	
+    while($row = $sql->fetch_assoc()) {
 				
-				   <div class="col-lg-4 " style="padding-left:152px;">
+				echo'<div class="col-lg-4 col-xs-4">
                     <img src="img/team/back.png" width=40% class="img-responsive img-circle">
-					<h4>Name Name</h4>
-					<h5 style="margin-left:3%;">Designation</h5>
-                </div>
+				<div>	<h4>'.$row["name"].'</h4>
+					<h5>'.$row["designation"].'</h5></div>
+                </div>';}  } else {
+		
+	}
 				
-				   <div class="col-lg-4 " style="padding-left:152px;">
-                    <img src="img/team/back.png" width=40% class="img-responsive img-circle">
-					<h4>Name Name</h4>
-					<h5 style="margin-left:3%;">Designation</h5>
-                </div>
+				?>
+				
+			</div>
 			</div>
 			<br>
-			 <div class="row">
-				<div class="col-lg-4" style="padding-left:152px;">
-                    <img src="img/team/back.png" width=40% class="img-responsive img-circle">
-					<h4>Name Name</h4>
-					<h5 style="margin-left:3%;">Designation</h5>
-                </div>
-				<div class="col-lg-4" style="padding-left:152px;">
-                    <img src="img/team/back.png" width=40% class="img-responsive img-circle">
-					<h4>Name Name</h4>
-					<h5 style="margin-left:3%;">Designation</h5>
-                </div>
-				
-				<div class="col-lg-4" style="padding-left:152px;">
-                    <img src="img/team/back.png" width=40% class="img-responsive img-circle">
-					<h4>Name Name</h4>
-					<h5 style="margin-left:3%;">Designation</h5>
-                </div>
-                
-            </div>
+		
         </div>
     </section>
     
 	<aside>
         <div class="container text-center">
             <div class="call-to-action">
-                <h2 >yaaha pe site visitors etc etc</h2>
-                
+				<div class="row wow fadeInUp" data-wow-offset="10">					
+<div class="col-md-3"><i class="fa fa-user fa-lg"></i><br><div class="counter" data-count="3080"><h1>0</h1></div><h5>followers</h5></div>
+<div class="col-md-3"><i class="fa fa-bus fa-lg"></i><br><div class="counter" data-count="6"><h2>0</h2></div><h5>Editions</h5></div>
+<div class="col-md-3"><i class="fa fa-tasks fa-lg"></i><br><div class="counter" data-count="7"><h2>0</h2></div><h5>Speakers</h5></div>
+<div class="col-md-3"><i class="fa fa-certificate fa-lg"></i><br><div class="counter" data-count="1"><h2>0</h2></div><h5>Amazing Experience!</h5></div>
             </div>
+			
+			</div>
+			
+			<script>
+			$('.counter').each(function() {
+  var $this = $(this),
+      countTo = $this.attr('data-count');
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 30000,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+  
+  
+
+});
+			
+			</script>
         </div>
     </aside>
 	
@@ -485,7 +504,19 @@ require('connect.php');
             </div>
         </div>
     </section>
-	
+			
+		<aside>
+        <div class="container text-center">
+            <div class="call-to-action">
+                TEDxNSIT &copy; 2017 <br> <br>This independent TEDx event is operated under license from TED 
+                
+            </div>
+			<br>
+			<div class="col-md-5 col-md-offset-3"><div style="margin-left:20%;"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
+									<i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+				</div></div>
+        </div>
+    </aside>
 	
 	
 	<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
