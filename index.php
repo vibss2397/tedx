@@ -109,7 +109,7 @@ require('connect.php');
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Countdown to Tedx Nsit</h2>
+                    <h2 class="section-heading" style="font-family:Raleway Semibold;">Countdown to Tedx Nsit</h2>
                     <hr class="light">
 					<br>
                     <div class="clock" style="margin-left:40px;"></div>
@@ -124,7 +124,7 @@ require('connect.php');
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">About Us</h2>
+                    <h2 class="section-heading"  style="font-family:Raleway Semibold;">About Us</h2>
                     <hr class="primary">
                 </div>
             </div>
@@ -159,7 +159,7 @@ require('connect.php');
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-4 col-md-offset-4 text-center">
-                    <h2 class="section-heading">Speakers</h2>
+                    <h2 class="section-heading"  style="font-family:Raleway Semibold;">Speakers</h2>
 					<hr>
                     <br>
                 </div>
@@ -246,7 +246,7 @@ require('connect.php');
             <div class="row">
                 <div class="col-md-4 col-md-offset-4 text-center">
 					<br>
-                    <h2 class="section-heading"> Past Speakers</h2>
+                    <h2 class="section-heading" style="font-family:Raleway Semibold;color:rgb(230,43,30)"> Past Speakers</h2>
 					<hr>
                     <br>
                 </div>
@@ -378,7 +378,7 @@ require('connect.php');
 	<aside>
         <div class="container text-center">
             <div class="call-to-action">
-                <h2>yaaha pe site visitors etc etc</h2>
+                <h2 >yaaha pe site visitors etc etc</h2>
                 
             </div>
         </div>
@@ -388,7 +388,7 @@ require('connect.php');
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Let's Get In Touch!</h2>
+                    <h2 class="section-heading" style="font-family:Raleway Semibold;">Let's Get In Touch!</h2>
                     <hr class="primary">
                 </div>
                 <div class="col-lg-6">
@@ -402,26 +402,15 @@ require('connect.php');
 <!-- Text input-->
 
 <div class="form-group">
-  <label class="col-md-4 control-label" style="color:#222222;">First Name</label>  
+  <label class="col-md-4 control-label" style="color:#222222;">Your Name</label>  
   <div class="col-md-6 inputGroupContainer">
   <div class="input-group">
   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-  <input  name="first_name" placeholder="First Name" class="form-control"  type="text">
+  <input  name="first_name" placeholder="Your Name" class="form-control"  type="text">
     </div>
   </div>
 </div>
 
-<!-- Text input-->
-
-<div class="form-group">
-  <label class="col-md-4 control-label" style="color:#222222;" >Last Name</label> 
-    <div class="col-md-6 inputGroupContainer">
-    <div class="input-group">
-  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-  <input name="last_name" placeholder="Last Name" class="form-control"  type="text">
-    </div>
-  </div>
-</div>
 
 <!-- Text input-->
        <div class="form-group">
@@ -429,7 +418,7 @@ require('connect.php');
     <div class="col-md-6 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-  <input name="email" placeholder="E-Mail Address" class="form-control"  type="text">
+  <input name="email" placeholder="Your Email Address" class="form-control"  type="text">
     </div>
   </div>
 </div>
@@ -445,7 +434,7 @@ require('connect.php');
     <div class="col-md-6 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-  <input name="phone" placeholder="(845)555-1212" class="form-control" type="text">
+  <input name="phone" placeholder="+91-9292929292" class="form-control" type="text">
     </div>
   </div>
 </div>
@@ -458,19 +447,19 @@ require('connect.php');
     <div class="col-md-6 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-        	<textarea class="form-control" name="comment" placeholder="Project Description"></textarea>
+        	<textarea class="form-control" name="comment" placeholder="Your Query"></textarea>
   </div>
   </div>
 </div>
 
 <!-- Success message -->
-<div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div>
+<div class="alert alert-success" style="display:none;" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div>
 
 <!-- Button -->
 <div class="form-group">
   <label class="col-md-4 control-label"></label>
   <div class="col-md-4">
-    <button type="submit" class="btn btn-warning" >Send <span class="glyphicon glyphicon-send"></span></button>
+    <button type="submit" class="btn btn-primary" style="background:rgb(230,43,30)" >Send <span class="glyphicon glyphicon-send"></span></button>
   </div>
 </div>
 
@@ -498,9 +487,7 @@ require('connect.php');
     </section>
 	
 	
-		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-  Launch demo modal
-</button>
+	
 	<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">

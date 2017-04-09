@@ -196,7 +196,10 @@ header .header-content .header-content-inner h1 {
   font-size: 30px;
 }
 header .header-content .header-content-inner hr {
-  margin: 30px auto;
+  margin: 50px auto;
+}
+hr{
+		background:rgb(230,43,30);
 }
 
 .img-circ {
