@@ -44,29 +44,70 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-</head>
 	<style>
-	.loader {
-    border: 16px solid #f3f3f3; /* Light grey */
-    border-top: 16px solid #3498db; /* Blue */
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    animation: spin 2s linear infinite;
+/* Center the loader */
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin { 
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
-	</style>
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
+</style>
+	
+	
+</head>
+
 	
 
 	
 	
-<body id="page-top" onload="myFunction()">
-	<div class="loader"></div>
-	<div id="myDiv">
+<body id="page-top" >
+	<div id="loader"></div>
+	<div style="display:none;" id="myDiv" class="animate-bottom">
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -500,7 +541,7 @@
 <!-- Text input-->
 
 <div class="form-group">
-  <label class="col-md-4 control-label">First Name</label>  
+  <label class="col-md-4 control-label" style="color:#222222;">First Name</label>  
   <div class="col-md-6 inputGroupContainer">
   <div class="input-group">
   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
@@ -512,7 +553,7 @@
 <!-- Text input-->
 
 <div class="form-group">
-  <label class="col-md-4 control-label" >Last Name</label> 
+  <label class="col-md-4 control-label" style="color:#222222;" >Last Name</label> 
     <div class="col-md-6 inputGroupContainer">
     <div class="input-group">
   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
@@ -523,7 +564,7 @@
 
 <!-- Text input-->
        <div class="form-group">
-  <label class="col-md-4 control-label">E-Mail</label>  
+  <label class="col-md-4 control-label" style="color:#222222;">E-Mail</label>  
     <div class="col-md-6 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
@@ -536,7 +577,7 @@
 <!-- Text input-->
        
 <div class="form-group">
-  <label class="col-md-4 control-label">Phone</label>  
+  <label class="col-md-4 control-label" style="color:#222222;">Phone</label>  
     <div class="col-md-6 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
@@ -549,7 +590,7 @@
 <!-- Text area -->
   
 <div class="form-group">
-  <label class="col-md-4 control-label">Your Message</label>
+  <label class="col-md-4 control-label" style="color:#222222;">Your Message</label>
     <div class="col-md-6 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
@@ -591,7 +632,28 @@
             </div>
         </div>
     </section>
+	
 	</div>
+	
+	
+		
+	<script type="text/javascript">
+		
+		var myVar;
+
+function myFunction() {
+    myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+
+	</script>		
+
+	
+
 	 <script>
       function initMap() {
         var uluru = {lat: 28.6091129, lng: 76.9650283};
@@ -626,22 +688,10 @@
 	
 	<script src="app.js"></script>
 
-
-</body>
-<script type="text/javascript">
-			var clock;
-	var myVar;
-
-function myFunction() {
-    myVar = setTimeout(showPage, 3000);
-}
-
-function showPage() {
-  document.getElementById("loader").style.display = "none";
-  document.getElementById("myDiv").style.display = "block";
-}
-	
-			$(document).ready(function() {
+<script>
+	$(document).ready(function() {
+		myFunction();			
+		var clock;
 				
 				// Grab the current date
 				var currentDate = new Date();
@@ -659,25 +709,35 @@ function showPage() {
 				});
 				
 				$('.owl-carousel').owlCarousel({
-    loop:true,
-    margin:10,
-    nav:true,
-	autoHeight:true,
-responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:1
-        },
-        1000:{
-            items:1
-        }
-    }
-})
+					loop:true,
+					margin:10,
+					nav:true,
+					autoHeight:true,
+					responsive:{
+						0:{
+							items:1
+						},
+						600:{
+							items:1
+						},
+						1000:{
+							items:1
+        					}
+								}
+					})
 			});
+		
+		
 		</script>
 	
+
+	
+	
+
+</body>
+
+	
+
 	
 
 </html>
