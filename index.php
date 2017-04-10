@@ -105,13 +105,18 @@ require('connect.php');
 
     <header id="#home">
 		<div id="particles-js"></div>
-		<div class="header-content"><img src="img/tedxx.png" width=40%></div>
-    </header>
-
+		<div class="header-content hidden-xs"><img src="img/tedxx.png" width=500px></div>
+		<div class="header-content hidden-sm hidden-md hidden-lg" style="position:absolute;margin-top:-550px;"><img src="img/tedxx.png" width=500px></div>
+		<div style="margin-top:-200px;margin-left:4%;position:absolute;z-index:5;color:black;font-family:'Raleway SemiBold';"><h3 >Registration Forms are Out now
+			<a href="https://docs.google.com/forms/d/e/1FAIpQLSeNPQ8ixAfseTrD2yeRJafewm7I7XfLVPNZ8g5Fy_7xdLtAtg/viewform" style="color:rgb(230,43,30);">Click Here</a>to register</h3></div>
+					
+		<div class="visible-md visible-lg visible-sm"style="margin-top:-80px;"><a id="#arow"href="#about" class="page-scroll arrow" ><img src="img/ic_keyboard_arrow_down_white_24dp.png"></a></div>
+		<br>
+			</header>
     <section class="bg-dark" >
         <div class="container">
             <div class="row wow bounceInUp" data-wow-offset="10" data-wow-delay="1s">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
+                <div class="col-lg-8 col-lg-offset-2 col-xs-11 text-center">
                     <h2 class="section-heading" style="font-family:Raleway Semibold;">Countdown to Tedx Nsit</h2>
                     <hr class="light">
 					<br>
@@ -180,12 +185,10 @@ require('connect.php');
 						<div class="row">
 							<input type="text" style="display:none;" id="s'.$row["id"].'" value="'.$row["description"].'">
 							<input type="text" style="display:none;" id="n'.$row["id"].'" value="'.$row["name"].'">
-							<a href="https://www.w3schools.com" id="fb'.$row["id"].'" target=_blank></a>
 							
-							<a href="'.$row["linkedin"].'" id="lin'.$row["id"].'" target=_blank></a>
-							<div class="col-md-5 col-md-offset-3 col-xs-12" style="margin-left:30%;">
-								<div class="portfolio-box"  >
-									<img src="img/portfolio/thumbnails/5.jpg" class="gallery-img img-responsive" >
+							<div class="col-md-5 col-md-offset-3 col-xs-8 col-xs-offset-2">
+								<div class="portfolio-box" >
+									<img src="img/2017/pics/'.$row["id"].'.jpg" style="margin-left:-3%;" class="img-responsive" >
 <div class="portfolio-box-caption" style="margin-left:-3%;"	>
                             <div class="portfolio-box-caption-content" style="z-index:3;">
                                 <div class="project-name">
@@ -229,8 +232,8 @@ require('connect.php');
 
 		<style>
 	.gallery-img {
-	height: 70%  !important;
-	width: 	100% !important;
+	height: 350px  !important;
+	width: 	650px !important;
 	margin-left:-3%;	
 }
 	
@@ -262,26 +265,23 @@ require('connect.php');
 					if ($sql->num_rows > 0) {
     // output data o	
     while($row = $sql->fetch_assoc()) {
-               echo' <div class="col-lg-4 col-sm-6 wow slideInRight" data-wow-offset="10">
-			   	<input type="text" style="display:none;" id="s'.$row["id"].'" value="'.$row["description"].'">
+               echo'	<input type="text" style="display:none;" id="s'.$row["id"].'" value="'.$row["description"].'">
 							<input type="text" style="display:none;" id="n'.$row["id"].'" value="'.$row["name"].'">
-							
-                    <div class="portfolio-box" onclick="modalshow('.$row["id"].')">
-                        <img src="img/portfolio/thumbnails/1.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                  <h1> '.$row["name"].'</h1>
-                                </div>
+							<div class="col-md-2 col-xs-5 wow fadeInUp" data-wow-duration="2s" data-wow-delay="1s">
+								<div class="portfolio-box"  onclick="modalshow('.$row["id"].')" >
+									<img src="img/2016/pics/'.$row["id"].'.jpg" style="margin-left:-3%;" class="img-responsive" >
+<div class="portfolio-box-caption" style="margin-left:-3%;"	>
+                            <div class="portfolio-box-caption-content" style="z-index:3;">
                                 <div class="project-name">
-                                  <h3>  '.$row["title"].' </h3>
-                                </div>
-								
-                        </div>
-						
-                    </div>
-					
-                </div> <br>'; } }
+								 <h1>'. $row["name"] .'</h1>
+									<h4>'.$row["title"].'</h4>
+
+								</div>
+								</div>
+							</div>
+							
+						</div>
+					</div>'; } }
 						else {
     echo "<br>Speakers to be added soon...";
 } ?>
@@ -296,21 +296,23 @@ require('connect.php');
 					if ($sql->num_rows > 0) {
     // output data o	
     while($row = $sql->fetch_assoc()) {
-               echo' <div class="col-lg-4 col-sm-6 wow slideInRight" data-wow-offset="10">
-                    <a href="img/portfolio/fullsize/1.jpg" class="portfolio-box">
-                        <img src="img/portfolio/thumbnails/1.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
+               echo'		<input type="text" style="display:none;" id="s'.$row["id"].'" value="'.$row["description"].'">
+							<input type="text" style="display:none;" id="n'.$row["id"].'" value="'.$row["name"].'">
+							<div class="col-md-2 col-xs-4  wow fadeInUp" data-wow-duration="2s" data-wow-delay="1s">
+								<div class="portfolio-box"  onclick="modalshow('.$row["id"].')" >
+									<img src="img/2015/pics/'.$row["id"].'.png"  width=267px height=260px style="margin-left:-3%;" class="img-responsive" >
+<div class="portfolio-box-caption" style="margin-left:-3%;"	>
+                            <div class="portfolio-box-caption-content" style="z-index:3;">
                                 <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div> <br>'; } }
+								 <h2>'. $row["name"] .'</h2>
+									<h4>'.$row["title"].'</h4>
+
+								</div>
+								</div>
+							</div>
+							
+						</div>
+					</div>'; } }
 						else {
     echo "Speakers to be added soon...";
 } ?>
@@ -344,8 +346,8 @@ require('connect.php');
     while($row = $sql->fetch_assoc()) {
 				
 				echo'<div class="col-lg-4 col-xs-4">
-                    <img src="img/team/back.png" width=40% class="img-responsive img-circle">
-				<div>	<h4>'.$row["name"].'</h4>
+                   
+				<div>	<h2>'.$row["name"].'</h2>
 					<h5>'.$row["designation"].'</h5></div>
                 </div>';}  } else {
 		
@@ -425,7 +427,7 @@ require('connect.php');
   <div class="col-md-6 inputGroupContainer">
   <div class="input-group">
   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-  <input  name="first_name" placeholder="Your Name" class="form-control"  type="text">
+  <input  id="name" placeholder="Your Name" class="form-control"  type="text">
     </div>
   </div>
 </div>
@@ -437,7 +439,7 @@ require('connect.php');
     <div class="col-md-6 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-  <input name="email" placeholder="Your Email Address" class="form-control"  type="text">
+  <input id="email" placeholder="Your Email Address" class="form-control"  type="text">
     </div>
   </div>
 </div>
@@ -453,7 +455,7 @@ require('connect.php');
     <div class="col-md-6 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-  <input name="phone" placeholder="+91-9292929292" class="form-control" type="text">
+  <input id="phone" placeholder="+91-9292929292" class="form-control" type="text">
     </div>
   </div>
 </div>
@@ -466,19 +468,20 @@ require('connect.php');
     <div class="col-md-6 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-        	<textarea class="form-control" name="comment" placeholder="Your Query"></textarea>
+        	<textarea class="form-control" id="comment" placeholder="Your Query"></textarea>
   </div>
   </div>
 </div>
 
 <!-- Success message -->
 <div class="alert alert-success" style="display:none;" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div>
+<div class="alert alert-danger" style="display:none;" role="alert" id="alert_message">Please Fill The Form First.</div>	
 
 <!-- Button -->
 <div class="form-group">
   <label class="col-md-4 control-label"></label>
   <div class="col-md-4">
-    <button type="submit" class="btn btn-primary" style="background:rgb(230,43,30)" >Send <span class="glyphicon glyphicon-send"></span></button>
+    <a class="btn btn-primary" style="background:rgb(230,43,30);" onclick="query()" >Send <span class="glyphicon glyphicon-send"></span></a>
   </div>
 </div>
 
@@ -498,7 +501,7 @@ require('connect.php');
       }
     </style>
 				
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-xs-7">
                     <div id="map"></div>
                 </div>
             </div>
@@ -526,7 +529,7 @@ require('connect.php');
        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 		     <span aria-hidden="true">&times;</span>
         </button>
-		  <h4 class="modal-title" id="exampleModalLongTitle">Modal title</h4>
+		  <h2 class="modal-title" id="exampleModalLongTitle" style="color:red;font-family:'Raleway';">Modal title</h2>
         
         
       </div>
@@ -664,6 +667,54 @@ function showPage() {
 	
 	function li(id){
 	$('#li'+id).click();
+		}
+	
+	
+		function query(){
+			var a=document.getElementById('name').value;
+			var b=document.getElementById('email').value;
+			var c=document.getElementById('phone').value;
+			var d=document.getElementById('comment').value;
+			if(!a || !b || !c || !d){
+				 $('#alert_message').show(200);
+			}else{
+		 var formdata = new FormData();
+			
+		  formdata.append("name",a);
+          formdata.append("email",b);
+          formdata.append("phone",c);
+          formdata.append("query",d);
+          formdata.append("submit","test");
+			
+			
+			 var xhttp = new XMLHttpRequest();
+        
+            xhttp.onreadystatechange = function() 
+            {
+              if (xhttp.readyState == 4 && xhttp.status == 200) 
+              {   
+               
+                strs = xhttp.responseText;
+//               $("#form-ts").hide();
+//               $("#thanks").append(strs);  
+                if(strs == 2){
+				
+				alert('naa');
+					
+				}
+				  else if(strs==1){
+                   $('#success_message').show(200);
+					 
+					  document.getElementById('name').value=null;
+			document.getElementById('email').value=null;
+			document.getElementById('phone').value=null;
+			document.getElementById('comment').value=null;
+					  
+                }
+              }
+            };
+            xhttp.open("POST", "file.php",true);
+            xhttp.send(formdata); }
 		}
 	</script>
 	

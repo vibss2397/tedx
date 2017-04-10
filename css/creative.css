@@ -15,10 +15,16 @@ body {
 	position: relative;
 	z-index: 1;
 }
+
+
 .header-content{
-	position: relative;
+	position: absolute;
 	z-index: 2;
 	
+}
+.arrow{
+		position: absolute;
+	z-index: 3;
 }
 hr {
   border-color: #aaaaaa;
@@ -257,7 +263,7 @@ header .header-content .header-content-inner p {
 .portfolio-box {
   position: relative;
   display: block;
-  max-width: 650px;
+  max-width: 100%;
   margin: 0 auto;
 }
 .portfolio-box .portfolio-box-caption {
