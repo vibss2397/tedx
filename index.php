@@ -11,7 +11,7 @@ require('connect.php');
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Tedx-Nsit</title>
+    <title>TEDxNSIT</title>
 	
 
     <!-- Bootstrap Core CSS -->
@@ -71,7 +71,7 @@ require('connect.php');
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-             <img src="img/tedx-header.png" style="margin-top:1.2%;position:absolute;" width=90px>
+             <img src="img/logo1.png" style="margin-top:1.2%;position:absolute;" width=90px>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -80,6 +80,10 @@ require('connect.php');
                     <li>
                         <a class="page-scroll" href="#home">Home</a>
                     </li>
+					<li>
+                        <a class="page-scroll" href="#register">Registration</a>
+                    </li>
+					
                     <li>
                         <a class="page-scroll" href="#about">About</a>
                     </li>
@@ -107,21 +111,28 @@ require('connect.php');
 		<div id="particles-js"></div>
 		<div class="header-content hidden-xs"><img src="img/tedxx.png" width=500px></div>
 		<div class="header-content hidden-sm hidden-md hidden-lg" style="position:absolute;margin-top:-550px;"><img src="img/tedxx.png" width=500px></div>
-		<div style="margin-top:-200px;margin-left:4%;position:absolute;z-index:5;color:black;font-family:'Raleway SemiBold';"><h3 >Registration Forms are Out now
-			<a href="https://docs.google.com/forms/d/e/1FAIpQLSeNPQ8ixAfseTrD2yeRJafewm7I7XfLVPNZ8g5Fy_7xdLtAtg/viewform" style="color:rgb(230,43,30);">Click Here</a>to register</h3></div>
+		<div class="header-content hidden-sm hidden-md hidden-lg" style="position:absolute;margin-top:-550px;"></div>
+			
 					
 		<div class="visible-md visible-lg visible-sm"style="margin-top:-80px;"><a id="#arow"href="#about" class="page-scroll arrow" ><img src="img/ic_keyboard_arrow_down_white_24dp.png"></a></div>
 		<br>
-			</header>
-    <section class="bg-dark" >
+	</header>
+    <section id="register" class="bg-dark"  >
         <div class="container">
             <div class="row wow bounceInUp" data-wow-offset="10" data-wow-delay="1s">
                 <div class="col-lg-8 col-lg-offset-2 col-xs-11 text-center">
-                    <h2 class="section-heading" style="font-family:Raleway Semibold;">Countdown to Tedx Nsit</h2>
+                    <h2 class="section-heading" style="font-family:Raleway Semibold;">Countdown to TEDxNSIT</h2>
                     <hr class="light">
 					<br>
                     <div class="clock" style="margin-left:40px;"></div>
                 </div>
+				<div class="col-lg-8 col-lg-offset-2 col-xs-11 text-center">
+				<h3 >Attendee Registration Forms are out now!<br>
+				<a href="https://docs.google.com/forms/d/e/1FAIpQLSeNPQ8ixAfseTrD2yeRJafewm7I7XfLVPNZ8g5Fy_7xdLtAtg/viewform" target="_blank"style="color:rgb(230,43,30);"><blink>Click Here</blink></a> to register!</h3>
+				<br>
+				<br>
+				<h2> Date: 16 April 2017<br> Time: 10:00 AM <br> <a href="https://www.google.co.in/maps/place/Netaji+Subhas+Institute+Of+Technology/@28.6091356,77.0328799,17z/data=!3m1!4b1!4m5!3m4!1s0x390d053516783c9b:0x7e540ab22a28446!8m2!3d28.6091309!4d77.0350686" target="_blank">Venue: NSIT, New Delhi</a></h2>
+				</div>
             </div>
         </div>
     </section>
@@ -141,19 +152,29 @@ require('connect.php');
 			<div class="col-md-7 col-md-offset-3 col-xs-12">	
            <div class="tab-content">
 	 <ul class="nav nav-tabs" role="tablist">
-    <li role="presentation" class="active"><a href="#ted" aria-controls="home" role="tab" data-toggle="tab">Ted</a></li>
-    <li role="presentation"><a href="#tedx" aria-controls="profile" role="tab" data-toggle="tab">Tedx</a></li>
-    <li role="presentation"><a href="#tedx-nsit" aria-controls="messages" role="tab" data-toggle="tab">Tedx Nsit</a></li>
+    <li role="presentation" class="active"><a href="#ted" aria-controls="home" role="tab" data-toggle="tab">TED</a></li>
+    <li role="presentation"><a href="#tedx" aria-controls="profile" role="tab" data-toggle="tab">TEDx</a></li>
+    <li role="presentation"><a href="#tedx-nsit" aria-controls="messages" role="tab" data-toggle="tab">TEDxNSIT</a></li>
   </ul>		   
 			   
-			   <div role="tabpanel" class="tab-pane active" id="ted"><br><h4>TED, the amalgamation of technology, entertainment and design is a global platform to ideas that have the power to change attitudes, lives and eventually the world. Ideas that have broken stereotypes ; ideas that have helped during times of crisis ; ideas that have brought smiles on millions of faces. And TED is where these ideas reach the seekers of knowledge through short but powerful conversations(18 min or less) with inspiring thinkers and  people from diverse disciplines and cultures. TED began in 1984 as a conference where Technology, Entertainment and Design converged, and today covers almost all topics — from science to business to global issues — in more than 100 languages.</h4>
+			   <div role="tabpanel" class="tab-pane active" id="ted"><br><h4>TED is a nonprofit organization devoted to Ideas Worth Spreading. Started as a four-day conference in California 30 years ago, TED has grown to support its mission with multiple initiatives. The two annual TED Conferences invite the world's leading thinkers and doers to speak for 18 minutes or less. Many of these talks are then made available, free, at TED.com. TED speakers have included Bill Gates, Jane Goodall, Elizabeth Gilbert, Sir Richard Branson, Nandan Nilekani, Philippe Starck, Ngozi Okonjo-Iweala, Sal Khan and Daniel Kahneman.
 
-</div>
-			   <div role="tabpanel" class="tab-pane" id="tedx"><br><h4>TEDx is a program under the TED banner to provide a  TED-like experience to as many people as possible. The TEDx Program under TED  acts as a catalyst  to help communities, organizations and individuals to ensue conversation and connection  by means of  screening of TED Talks videos or a combination of live presenters .TEDx events are planned and coordinated independently, under a free license granted by TED. </h4>
-</div>
+							The annual TED Conference takes place each spring in Vancouver, British Columbia. TED's media initiatives include TED.com, where new TED Talks are posted daily; the Open Translation Project, which provides subtitles and interactive transcripts as well as translations from volunteers worldwide; the educational initiative TED-Ed. TED has established the annual TED Prize, where exceptional individuals with a wish to change the world get help translating their wishes into action; TEDx, which supports individuals or groups in hosting local, self- organized TED-style events around the world, and the TED Fellows program, helping world-changing innovators from around the globe to amplify the impact of their remarkable projects and activities.
+
+							Follow TED on Twitter at <a href="http://twitter.com/TEDTalks" target="_blank">http://twitter.com/TEDTalks</a>, or on Facebook at <a href="http://www.facebook.com/TED" target="_blank">http://www.facebook.com/TED.</a></h4>
+
+				</div>
+			   <div role="tabpanel" class="tab-pane" id="tedx"><br><h4>In the spirit of ideas worth spreading, <a href="https://www.ted.com/about/programs-initiatives/tedx-program" target="_blank">TEDx</a> is a program of local, self-organized events that bring people together to share a TED-like experience. At a TEDx event, TED Talks video and live speakers combine to spark deep discussion and connection. These local, self-organized events are branded TEDx, where x = independently organized TED event. The TED Conference provides general guidance for the TEDx program, but individual TEDx events are self-organized.<p> (Subject to certain rules and regulations.) </p></h4>
+				</div>
 			   
-<div role="tabpanel" class="tab-pane" id="tedx-nsit"><br><h4>TEDXNSIT is an event filled with brilliant speakers, thought-provoking personalities and mind-blowing conversations. TEDXNSIT is where we unleash new ideas, inspire and inform the community. In the spirit of ideas worth spreading,since its inception  TEDxNSIT has now become an annual event. We look forward to motivate and inspire the audience with some unconventional speakers from different walks of life coming together under one roof for the betterment of the community</h4>
-</div>
+				<div role="tabpanel" class="tab-pane" id="tedx-nsit"><br><h4>TEDXNSIT is an event filled with brilliant speakers, thought-provoking personalities and mind-blowing conversations. TEDXNSIT is where we unleash new ideas, inspire and inform the community. In the spirit of ideas worth spreading,since its inception  TEDxNSIT has now become an annual event. We look forward to motivate and inspire the audience with some unconventional speakers from different walks of life coming together under one roof for the betterment of the communityTEDxNSIT is an event filled with brilliant speakers, thought-provoking personalities and mind-blowing conversations. TEDXNSIT is where we unleash new ideas, inspire and inform the community. In the spirit of ideas worth spreading,since its inception  TEDxNSIT has now become an annual event. We look forward to motivate and inspire the audience with some unconventional speakers from different walks of life coming together under one roof for the betterment of the community<br><p><center>Redefining Convention</center><br>
+
+							This year, we at TedX NSIT bring to you scintillating talks by people who made it big, even while treading the path less travelled, and now are an inspiration to us all.<br>
+
+							Often in our lives we find ourselves standing at crossroads. Eyeing down to the farthest horizon of every one of them, we weigh are options. But it’s not always as clear, sometimes it’s foggy, obscure and uncertain. To set out on an unconventional one is disconcerting, and demands a firm resolve. It is these moments which define us, and test our conviction and passion. Battling through the hardships help us in growing as an individual and it is truly an exhilarating process.
+
+							Join us as these speakers share their own captivating, unorthodox stories.</p></h4>
+				</div>
 
 </div>
 				</div>
@@ -504,7 +525,12 @@ require('connect.php');
                 <div class="col-lg-4 col-xs-7">
                     <div id="map"></div>
                 </div>
+				
             </div>
+			<div class="row">
+			<div ><center><h3 >Attendee Registration Forms are out now!<br>
+			<a href="https://docs.google.com/forms/d/e/1FAIpQLSeNPQ8ixAfseTrD2yeRJafewm7I7XfLVPNZ8g5Fy_7xdLtAtg/viewform" target="_blank"style="color:rgb(230,43,30);">Click Here</a> to register!</h3><center></div>
+			</div>
         </div>
     </section>
 			
@@ -515,8 +541,8 @@ require('connect.php');
                 
             </div>
 			<br>
-			<div class="col-md-5 col-md-offset-3"><div style="margin-left:20%;"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
-									<i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+			<div class="col-md-5 col-md-offset-3"><div style="margin-left:20%;"><a href="https://www.facebook.com/TEDxNSIT/" target="_blank"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+									<a href="https://www.youtube.com/results?search_query=tedxnsit" target="_blank"><i class="fa fa-youtube fa-2x" aria-hidden="true"></i></a>
 				</div></div>
         </div>
     </aside>
@@ -529,13 +555,13 @@ require('connect.php');
        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 		     <span aria-hidden="true">&times;</span>
         </button>
-		  <h2 class="modal-title" id="exampleModalLongTitle" style="color:red;font-family:'Raleway';">Modal title</h2>
+		  <h2 class="modal-title" id="exampleModalLongTitle" style="color:red;font-family:'Raleway';"></h2>
         
         
       </div>
       <div class="modal-body" >
 		  <div class="row">
-			  <div class="col-md-11" id="modal-body">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+			  <div class="col-md-11" id="modal-body"></div>
 		  
 		  </div>
       </div>
@@ -566,9 +592,9 @@ function showPage() {
 
 	 <script>
       function initMap() {
-        var uluru = {lat: 28.6091129, lng: 76.9650283};
+        var uluru = {lat: 28.6091309, lng: 77.0350686};
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 12,
+          zoom: 16,
           center: uluru
         });
         var marker = new google.maps.Marker({
